@@ -1,0 +1,15 @@
+$textGrey: #968c8c;
+$FontSizes: ('small':13px,
+    'Regular':14px,
+    'Large': 15px,
+    'ExtraLarge': 46px);
+
+// @function size($fontName){
+//     @return map-get($FontSizes, $fontName )
+// }
+
+@mixin ImgPosition($size) {
+    background-size: $size;
+    background-position: center;
+    background-repeat: no-repeat;
+} 

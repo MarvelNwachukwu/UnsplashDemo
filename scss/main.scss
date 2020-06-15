@@ -1,0 +1,397 @@
+@import './variables';
+@import './resets';
+
+header {
+    height: 14vh;
+    width: 100vw;
+    padding-left: 0.8vw;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    box-shadow: 3px 5px 2px rgb(218, 210, 210);
+    border: none;
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+
+    // ==========================================================
+    // ====================subheader1============================
+    // ==========================================================
+
+    #subheader1 {
+        position: relative;
+        display: grid;
+        grid-template-columns: 10% 60% 30%;
+        height: 6vh;
+        width: 100vw;
+        margin-top: 1vh;
+        z-index: 1;
+
+
+        #UnsplashLogo {
+            color: black;
+            text-decoration: none;
+
+            div {
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                background: url(/asset/UnsplashLogo.svg);
+                @include ImgPosition(78%);
+            }
+
+            p {
+                display: inline-block;
+                position: absolute;
+                top: 0.2vh;
+                left: 2.5vw;
+                font-size: map-get($FontSizes, small);
+
+                span {
+                    font-size: map-get($FontSizes, Large);
+                    font-weight: bold;
+                }
+            }
+        }
+
+
+        #SearchImage {
+            position: relative;
+            height: 4.2vh;
+            width: 58vw;
+            border: none;
+            border-radius: 50px;
+            font-size: 14px;
+            background-color: #eeeeee;
+            color: $textGrey;
+            padding-left: 3em;
+        }
+
+        #SearchImage:hover {
+            border: 1px solid rgba(179, 176, 176, 0.76);
+        }
+
+        #SearchBtn{
+            position: absolute;
+            left: 10.75vw;
+            top: 1vh;
+            height: 20px;
+            width: 20px;
+            background: url(/asset/search.svg);
+            @include ImgPosition(100%);
+            border: none;
+            cursor: pointer;
+        }
+
+
+        // ================================
+        // Topic ----- Join Free Sub Header
+        // ================================
+
+
+        #navTab {
+            position: relative;
+
+
+            a {
+                color: $textGrey;
+                text-decoration: none;
+                position: absolute;
+                top: 1.4vh;
+                font-size: map-get($FontSizes , Regular );
+            }
+
+            a:nth-child(1){
+                left:0vw;
+            }
+            a:nth-child(2){
+                left: 3.5vw;
+            }
+            a:nth-child(3){
+                left: 7vw;
+            }
+            a:nth-child(4){
+                top: 0.7vh;
+                left: 10vw;
+                height: 3vh;
+                width: 6vw;
+                text-align: center;
+                padding-top: 0.5vh;
+                border: 1px solid rgba(179, 176, 176, 0.76);
+                border-radius: 5px;
+            }
+            a:nth-child(5){
+                top: 0.1vh;
+                height: 4vh;
+                right: 8vw;
+                border-left: 1px solid rgba(179, 176, 176, 0.76);
+                padding: 1em 0px 1em 2em;
+            }
+            a:nth-child(6){
+                top: 1vh;
+                right: 3vw;
+                color: white;
+                background-color: #3cb46e;
+                height: 3vh;
+                width: 4vw;
+                text-align: center;
+                padding-top: 0.5em;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    #subheader2 {
+        position: relative;
+        height: 6vh;
+        font-size: map-get($FontSizes, Regular);
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 5% 88% 7%;
+        color: $textGrey;
+        overflow-y: hidden;
+        z-index: 1;
+    
+        #editorial {
+            margin-top: 2.5vh;
+            // margin-left: 1em;
+            color: black;
+            font-size: map-get($FontSizes, Large );
+            line-height: 24px;
+            border-bottom: 3px solid black;;
+            // padding-right: 1em;
+            width: 4em;
+            z-index: 1;
+        }
+
+        #editorial::after{
+            position: absolute;
+            left: 5vw;
+            content: '';
+            height: 3em;
+            width: 0.05em;
+            background-color: $textGrey;
+        }
+    
+        #TopSearches {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            background: transparent;
+            overflow-x: scroll;
+            z-index: 0;
+    
+
+            &::-webkit-scrollbar {
+                display: none;
+                }    
+
+            &.element { overflow: -moz-scrollbars-none; }
+
+            div{
+                display: inline-block;
+                margin-left: 2em;
+                padding-top: 1.9em;
+                width: fit-content;
+                flex-shrink: 0;
+            }
+
+        }
+    
+        #viewAll{
+            padding-left: 3.5em;
+            margin-top: 2.5vh;
+            background: transparent;
+        }
+    }
+}
+                            // ===========
+                            // Search Box
+                            // ===========
+
+
+#SearchBox{
+    height: 37.5em;
+    width: 100vw;
+    background-color: palevioletred;
+    position: relative;
+    // top: 1vh;
+    background: url(https://source.unsplash.com/random/800x600/daily);
+    @include ImgPosition(100%);
+    color: white;
+
+    h1{
+        position: absolute;
+        top: 15vh;
+        left: 28vw;
+        font-size: map-get($FontSizes, ExtraLarge );
+    }
+
+    p{
+        position: absolute;
+        top: 23vh;
+        left: 28vw;
+        line-height: 29px;
+        font-size: 18px;
+
+        a{
+            color: white;
+        }
+    }
+
+    form{
+
+        input{
+            position: absolute;
+            height: 4em;
+            width: 40vw;
+            top: 30vh;
+            left: 28vw;
+            padding-left: 2vw;
+        }
+
+        button{
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background-image: url(/asset/search.svg);
+            @include ImgPosition(100%);
+            top: 32vh;
+            left: 29vw;
+            border: none;
+            cursor: pointer;
+
+        }
+    }
+
+    h6{
+        position: absolute;
+        font-size: 15px;
+        line-height: 24px;
+        top: 37vh;
+        left: 28vw;;
+
+        a{
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#DisplayImages{
+    height: 200em;
+    width: 70vw;
+    // background-color: rgb(192, 112, 216);
+    position: relative;
+    margin: 0 auto;
+
+    div{
+        position: absolute;
+        height: 40em;
+        width: 26em;
+        // background-color: green;
+        @include ImgPosition(100%)
+    }
+
+    div:nth-child(1){
+        top: 5vh;
+        left: 0;
+        // border: 1px solid black;
+        background: url(https://source.unsplash.com/random/420x640/daily);
+    }
+    div:nth-child(2){
+        top: 5vh;
+        left: 24.25vw;
+        background: url(https://source.unsplash.com/random/420x641/daily);
+    }
+    div:nth-child(3){
+        top: 5vh;
+        right: 0;
+        height: 20em;
+        width: 26em;
+        // border: 1px solid black;
+        background: url(https://source.unsplash.com/random/420x320/daily);
+    }
+    div:nth-child(4){
+        top: 76vh;
+        background: url(https://source.unsplash.com/random/420x642/daily);
+    }
+    div:nth-child(5){
+        top: 76vh;
+        left: 24.25vw;
+        background: url(https://source.unsplash.com/random/421x642/daily);
+    }
+    div:nth-child(6){
+        top: 42vh;
+        right: 0;
+        background: url(https://source.unsplash.com/random/421x643/daily);
+    }
+    div:nth-child(7){
+        top: 148vh;
+        background: url(https://source.unsplash.com/random/422x641/daily);
+    }
+    div:nth-child(8){
+        top: 148vh;
+        left: 24.25vw;
+        height: 20em;
+        width: 26em;
+        background: url(https://source.unsplash.com/random/422x320/daily);
+
+    }
+    div:nth-child(9){
+        top: 114vh;
+        right: 0;
+        background: url(https://source.unsplash.com/random/423x642/daily);
+
+    }
+    div:nth-child(10){
+        top: 220vh;
+        height: 20em;
+        width: 26em;
+        background: url(https://source.unsplash.com/random/420x321/daily);
+
+    }
+    div:nth-child(11){
+        top: 186vh;
+        left: 24.25vw;
+        // height: 20em;
+        // width: 26em;
+        background: url(https://source.unsplash.com/random/424x643/daily);
+    }
+    div:nth-child(12){
+        top: 186vh;
+        right: 0;
+        background: url(https://source.unsplash.com/random/423x643/daily);
+    }
+    div:nth-child(13){
+        top: 258vh;
+        background: url(https://source.unsplash.com/random/424x644/daily);
+
+    }
+    div:nth-child(14){
+        top: 258vh;
+        left: 24.25vw;
+        background: url(https://source.unsplash.com/random/424x645/daily);
+    }
+    div:nth-child(15){
+        top: 258vh;
+        right: 0;
+        background: url(https://source.unsplash.com/random/423x646/daily);
+    }
+
+}

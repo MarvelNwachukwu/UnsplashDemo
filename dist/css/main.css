@@ -1,0 +1,399 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Helvetica, Ubuntu, Roboto, Noto, Segoe UI, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  height: 14vh;
+  width: 100vw;
+  padding-left: 0.8vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+  -webkit-box-shadow: 3px 5px 2px #dad2d2;
+          box-shadow: 3px 5px 2px #dad2d2;
+  border: none;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+}
+
+header #subheader1 {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 60% 30%;
+      grid-template-columns: 10% 60% 30%;
+  height: 6vh;
+  width: 100vw;
+  margin-top: 1vh;
+  z-index: 1;
+}
+
+header #subheader1 #UnsplashLogo {
+  color: black;
+  text-decoration: none;
+}
+
+header #subheader1 #UnsplashLogo div {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background: url(/asset/UnsplashLogo.svg);
+  background-size: 78%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header #subheader1 #UnsplashLogo p {
+  display: inline-block;
+  position: absolute;
+  top: 0.2vh;
+  left: 2.5vw;
+  font-size: 13px;
+}
+
+header #subheader1 #UnsplashLogo p span {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+header #subheader1 #SearchImage {
+  position: relative;
+  height: 4.2vh;
+  width: 58vw;
+  border: none;
+  border-radius: 50px;
+  font-size: 14px;
+  background-color: #eeeeee;
+  color: #968c8c;
+  padding-left: 3em;
+}
+
+header #subheader1 #SearchImage:hover {
+  border: 1px solid rgba(179, 176, 176, 0.76);
+}
+
+header #subheader1 #SearchBtn {
+  position: absolute;
+  left: 10.75vw;
+  top: 1vh;
+  height: 20px;
+  width: 20px;
+  background: url(/asset/search.svg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+header #subheader1 #navTab {
+  position: relative;
+}
+
+header #subheader1 #navTab a {
+  color: #968c8c;
+  text-decoration: none;
+  position: absolute;
+  top: 1.4vh;
+  font-size: 14px;
+}
+
+header #subheader1 #navTab a:nth-child(1) {
+  left: 0vw;
+}
+
+header #subheader1 #navTab a:nth-child(2) {
+  left: 3.5vw;
+}
+
+header #subheader1 #navTab a:nth-child(3) {
+  left: 7vw;
+}
+
+header #subheader1 #navTab a:nth-child(4) {
+  top: 0.7vh;
+  left: 10vw;
+  height: 3vh;
+  width: 6vw;
+  text-align: center;
+  padding-top: 0.5vh;
+  border: 1px solid rgba(179, 176, 176, 0.76);
+  border-radius: 5px;
+}
+
+header #subheader1 #navTab a:nth-child(5) {
+  top: 0.1vh;
+  height: 4vh;
+  right: 8vw;
+  border-left: 1px solid rgba(179, 176, 176, 0.76);
+  padding: 1em 0px 1em 2em;
+}
+
+header #subheader1 #navTab a:nth-child(6) {
+  top: 1vh;
+  right: 3vw;
+  color: white;
+  background-color: #3cb46e;
+  height: 3vh;
+  width: 4vw;
+  text-align: center;
+  padding-top: 0.5em;
+  border-radius: 5px;
+}
+
+header #subheader2 {
+  position: relative;
+  height: 6vh;
+  font-size: 14px;
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5% 88% 7%;
+      grid-template-columns: 5% 88% 7%;
+  color: #968c8c;
+  overflow-y: hidden;
+  z-index: 1;
+}
+
+header #subheader2 #editorial {
+  margin-top: 2.5vh;
+  color: black;
+  font-size: 15px;
+  line-height: 24px;
+  border-bottom: 3px solid black;
+  width: 4em;
+  z-index: 1;
+}
+
+header #subheader2 #editorial::after {
+  position: absolute;
+  left: 5vw;
+  content: '';
+  height: 3em;
+  width: 0.05em;
+  background-color: #968c8c;
+}
+
+header #subheader2 #TopSearches {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  background: transparent;
+  overflow-x: scroll;
+  z-index: 0;
+}
+
+header #subheader2 #TopSearches::-webkit-scrollbar {
+  display: none;
+}
+
+header #subheader2 #TopSearches.element {
+  overflow: -moz-scrollbars-none;
+}
+
+header #subheader2 #TopSearches div {
+  display: inline-block;
+  margin-left: 2em;
+  padding-top: 1.9em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+header #subheader2 #viewAll {
+  padding-left: 3.5em;
+  margin-top: 2.5vh;
+  background: transparent;
+}
+
+#SearchBox {
+  height: 37.5em;
+  width: 100vw;
+  background-color: palevioletred;
+  position: relative;
+  background: url(https://source.unsplash.com/random/800x600/daily);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+#SearchBox h1 {
+  position: absolute;
+  top: 15vh;
+  left: 28vw;
+  font-size: 46px;
+}
+
+#SearchBox p {
+  position: absolute;
+  top: 23vh;
+  left: 28vw;
+  line-height: 29px;
+  font-size: 18px;
+}
+
+#SearchBox p a {
+  color: white;
+}
+
+#SearchBox form input {
+  position: absolute;
+  height: 4em;
+  width: 40vw;
+  top: 30vh;
+  left: 28vw;
+  padding-left: 2vw;
+}
+
+#SearchBox form button {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-image: url(/asset/search.svg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 32vh;
+  left: 29vw;
+  border: none;
+  cursor: pointer;
+}
+
+#SearchBox h6 {
+  position: absolute;
+  font-size: 15px;
+  line-height: 24px;
+  top: 37vh;
+  left: 28vw;
+}
+
+#SearchBox h6 a {
+  color: white;
+  text-decoration: none;
+}
+
+#DisplayImages {
+  height: 200em;
+  width: 70vw;
+  position: relative;
+  margin: 0 auto;
+}
+
+#DisplayImages div {
+  position: absolute;
+  height: 40em;
+  width: 26em;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#DisplayImages div:nth-child(1) {
+  top: 5vh;
+  left: 0;
+  background: url(https://source.unsplash.com/random/420x640/daily);
+}
+
+#DisplayImages div:nth-child(2) {
+  top: 5vh;
+  left: 24.25vw;
+  background: url(https://source.unsplash.com/random/420x641/daily);
+}
+
+#DisplayImages div:nth-child(3) {
+  top: 5vh;
+  right: 0;
+  height: 20em;
+  width: 26em;
+  background: url(https://source.unsplash.com/random/420x320/daily);
+}
+
+#DisplayImages div:nth-child(4) {
+  top: 76vh;
+  background: url(https://source.unsplash.com/random/420x642/daily);
+}
+
+#DisplayImages div:nth-child(5) {
+  top: 76vh;
+  left: 24.25vw;
+  background: url(https://source.unsplash.com/random/421x642/daily);
+}
+
+#DisplayImages div:nth-child(6) {
+  top: 42vh;
+  right: 0;
+  background: url(https://source.unsplash.com/random/421x643/daily);
+}
+
+#DisplayImages div:nth-child(7) {
+  top: 148vh;
+  background: url(https://source.unsplash.com/random/422x641/daily);
+}
+
+#DisplayImages div:nth-child(8) {
+  top: 148vh;
+  left: 24.25vw;
+  height: 20em;
+  width: 26em;
+  background: url(https://source.unsplash.com/random/422x320/daily);
+}
+
+#DisplayImages div:nth-child(9) {
+  top: 114vh;
+  right: 0;
+  background: url(https://source.unsplash.com/random/423x642/daily);
+}
+
+#DisplayImages div:nth-child(10) {
+  top: 220vh;
+  height: 20em;
+  width: 26em;
+  background: url(https://source.unsplash.com/random/420x321/daily);
+}
+
+#DisplayImages div:nth-child(11) {
+  top: 186vh;
+  left: 24.25vw;
+  background: url(https://source.unsplash.com/random/424x643/daily);
+}
+
+#DisplayImages div:nth-child(12) {
+  top: 186vh;
+  right: 0;
+  background: url(https://source.unsplash.com/random/423x643/daily);
+}
+
+#DisplayImages div:nth-child(13) {
+  top: 258vh;
+  background: url(https://source.unsplash.com/random/424x644/daily);
+}
+
+#DisplayImages div:nth-child(14) {
+  top: 258vh;
+  left: 24.25vw;
+  background: url(https://source.unsplash.com/random/424x645/daily);
+}
+
+#DisplayImages div:nth-child(15) {
+  top: 258vh;
+  right: 0;
+  background: url(https://source.unsplash.com/random/423x646/daily);
+}
+/*# sourceMappingURL=main.css.map */
